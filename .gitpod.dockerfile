@@ -1,5 +1,6 @@
 FROM gitpod/workspace-postgresql
 
 RUN sudo apt-get update 
-RUN sudo su - postgres
-RUN CREATEDB wavelength
+ENV POSTGRES_USER docker
+ENV POSTGRES_PASSWORD docker
+ENV POSTGRES_DB docker
